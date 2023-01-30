@@ -20,6 +20,10 @@
             display: table;
             width: 100%;
         }
+
+        #sidebar.hide-sidebar {
+            left: -250px;
+        }
     </style>
 </head>
 
@@ -29,7 +33,7 @@
     <nav class="navbar navbar-expand-lg " style="background-color: white;">
         <div class="container-fluid">
 
-            <a href="#"><img src="./images/menu-bar.svg" class="me-2"></a>
+            <a class="toggalbtn" href="#"><img src="./images/menu-bar.svg" class="me-2"></a>
 
 
             <img src="./images/header-logo.svg">
@@ -75,7 +79,7 @@
 
 
     <div class="row">
-        <div class="col-lg-2 d-none d-lg-block d-xl-block d-xxl-block ">
+        <div class="col-lg-2 d-none d-lg-block d-xl-block d-xxl-block" id="sidebarxyz">
             <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white my-auto">
                 <div class="position-sticky">
                     <div class="list-group list-group-flush mx-3 mt-4" style="height: 1280px;">
@@ -120,7 +124,7 @@
             <!-- Sidebar -->
         </div>
 
-        <div class="col-lg-10 px-5">
+        <div class="col-lg-10  px-5" id="mainContent">
             <h2 class="my-5 ms-3">Dashboard</h2>
             <div class="row">
                 <div class="col-lg-2 col-md-6 col-sm-12 mb-2 ">
@@ -150,7 +154,7 @@
                 <div class="col-lg-2 col-md-6 col-sm-12 mb-2 ms-auto">
                     <div class="card border-0">
                         <div class=" row card-body">
-                            <div class="col-3"><img src="images/total-product.svg" class="py-4 ps-3"></div>
+                            <div class="col-3"><img src="images/total-product.svg" class=" py-4 ps-3"></div>
                             <div class="col-9 py-4">
                                 <h5 class="card-title" style="text-align: center;">32,456</h5>
                                 <p class="card-text " style="text-align: center;">Total Products</p>
@@ -232,7 +236,7 @@
 
             <div class="row">
                 <div class="col-12 mt-4 ms-2">
-                    <div class="col-11" style="background-color: white;">
+                    <div class="col-12" style="background-color: white;">
                         <nav class="navbar">
                             <div class="container-fluid ">
                                 <h3>invoice</h3>
@@ -348,6 +352,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="./js/custome.js"></script>
 </body>
 
 </html>

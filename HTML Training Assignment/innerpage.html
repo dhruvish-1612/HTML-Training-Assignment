@@ -6,9 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        input[type=radio]#red {
+            accent-color: red;
+        }
+
+        /* input[type='radio']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: 15px;
+            left: -1px;
+            position: relative;
+            background-color: white;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
+
+        input[type='radio']:checked:after {
+            width: 16px;
+            height: 16px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: red;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            padding: 1px;
+            border: 2px solid white;
+        } */
+    </style>
+
+
 </head>
 
 <body>
@@ -58,7 +98,7 @@
             </div>
         </div>
     </nav>
-    <div class="row">
+    <div class="row container-fluid">
         <div class="col-lg-2 d-none d-lg-block d-xl-block d-xxl-block ">
             <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white my-auto">
                 <div class="position-sticky">
@@ -106,26 +146,28 @@
         <div class="col-lg-10 px-5" style="background-color: #FAFAFA;">
             <h3 class="pt-5 ps-1" style="font-weight: bold;">Analysis</h3>
             <form class="ps-3 pt-3" style="background-color: white;">
-                <h4>One Column</h4>
+                <h4 class="ms-1">One Column</h4>
                 <div class="form-row">
-                    <div class="form-group col-md-6 pt-2">
+                    <div class="form-group col-md-6 mt-3 w-100">
 
-                        <input type="email" class="form-control " id="inputEmail4" placeholder="Name">
+                        <div class="form-floating mb-3 ">
+                            <input type="email" class="form-control shadow-none " id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Name</label>
+                        </div>
+
                     </div>
-                    <div class="form-group col-md-6 pt-3">
-
-                        <select class="selectpicker form-control show-menu-arrow mt-3 w-100"
-                            title="Choose one of the following...">
-                            <option>Dropdown </option>
-                            <option>Option2</option>
-                            <option>Option1</option>
-                            <option>Option1</option>
-                            <option>Option1</option>
-                            <option>Option1</option>
+                    <div class=" col-lg-6 col-sm-12 mt-3 w-100">
+                        <select class="form-select form-select-lg mb-3" style="height: calc(3.5rem + 2px);"
+                            aria-label=" .form-select-lg example">
+                            <option selected>Dropdown</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
 
                         </select>
                     </div>
-                    <div class="form-group pt-3 ">
+                    <div class="form-group mt-3 ">
 
                         <textarea name="" placeholder="form-control" id="" cols="170" rows="5"
                             class="form-control"></textarea>
@@ -142,28 +184,32 @@
 
                         <div class="form-group mt-3">
                             <div class="row">
-                                <div class="col-lg-6 col-sm-12">
-                                    <input type="text" class="form-control mt-3" id="inputCity" placeholder="Name">
-                                </div>
-                                <div class="col-lg-6 col-sm-12">
 
-                                    <input type="text" class="form-control mt-3" id="inputCity "
+                                <div class="form-floating col-lg-6 col-sm-12">
+                                    <input type="text" class="form-control shadow-none" id="floatingInput"
+                                        placeholder="Name">
+                                    <label for="floatingInput" class="ms-3">Name</label>
+                                </div>
+                                <div class="form-floating col-lg-6 col-sm-12">
+
+                                    <input type="text" class="form-control  shadow-none" id="inputCity "
                                         placeholder="User Name">
+                                    <label for="floatingInput" class="ms-3">User Name</label>
                                 </div>
                                 <div class="w-100"></div>
-                                <div class="col-lg-6 col-sm-12">
+                                <div class="form-floating col-lg-6 col-sm-12 mt-3">
 
-                                    <input type="text" class="form-control mt-3" id="inputCity" placeholder="Password">
+                                    <input type="password" class="form-control shadow-none" id="inputCity"
+                                        placeholder="Password">
+                                    <label for="floatingInput" class="ms-3">Password</label>
                                 </div>
-                                <div class="col-lg-6 col-sm-12">
-                                    <select class="selectpicker form-control show-menu-arrow mt-3 w-100"
-                                        title="Choose one of the following...">
-                                        <option>Dropdown </option>
-                                        <option>Option2</option>
-                                        <option>Option1</option>
-                                        <option>Option1</option>
-                                        <option>Option1</option>
-                                        <option>Option1</option>
+                                <div class=" col-lg-6 col-sm-12 mt-3">
+                                    <select class="form-select form-select-lg mb-3" style="height: calc(3.5rem + 2px);"
+                                        aria-label=" .form-select-lg example">
+                                        <option selected>Dropdown</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
 
                                     </select>
                                 </div>
@@ -173,34 +219,160 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputState">State</label>
-                    <select id="inputState" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>...</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-2">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
-                  </div>
+                <h4 class="ms-1 pt-4">Three Column</h4>
+                <div class="row">
+
+                    <div class="form-floating col-lg-4 col-sm-12 mt-2">
+
+                        <input type="text" class="form-control shadow-none" id="inputEmail4" placeholder="Focus">
+                        <label for="floatingInput" class="ms-3">Focus</label>
+
+                    </div>
+                    <div class="form-floating col-lg-4 col-sm-12 mt-2">
+                        <input type="password" class="form-control  shadow-none" id="inputEmail4"
+                            placeholder="Password">
+                        <label for="floatingInput" class="ms-3">Password</label>
+                    </div>
+                    <div class=" col-lg-4 col-sm-12 mt-2 ">
+
+                        <input class="form-control" id="disabledInput" type="text" style="height: calc(3.5rem + 2px);"
+                            placeholder="Johndue" disabled>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Check me out
-                    </label>
-                  </div>
+                <h4 class="ms-1 pt-4">Four Column</h4>
+                <div class="row">
+
+                    <div class="form-floating col-lg-3 col-md-6 col-sm-12 mt-2">
+
+                        <input type="text" class="form-control is-invalid shadow-none" id="validationServer03"
+                            placeholder="Designation" aria-describedby="validationServer03Feedback" required>
+                        <label for="floatingInput" class="ms-3">Designation</label>
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            Enter valid data
+                        </div>
+
+                    </div>
+                    <div class="form-floating  col-lg-3 col-md-6 col-sm-12 mt-2">
+                        <input type="text" class="form-control shadow-none" id="inputEmail4" placeholder="Name">
+                        <label for="floatingInput" class="ms-3">Name</label>
+                        <div class="ps-1" style="font-size:14px ; color: #ADADAD;">Enter your full Name as per ID</div>
+
+                    </div>
+                    <div class="form-floating col-lg-3 col-md-6 col-sm-12 mt-2 ">
+
+                        <input type="text" class="form-control shadow-none" id="inputEmail4" placeholder="Username">
+                        <label for="floatingInput" class="ms-3">Username</label>
+                    </div>
+                    <div class="  col-lg-3 col-md-6 col-sm-12 mt-2 ">
+
+                        <select class="selectpicker form-control show-menu-arrow  w-100"
+                            title="Choose one of the following..." style="height: calc(3.5rem + 2px);">
+                            <option>Select </option>
+                            <option>Option2</option>
+                            <option>Option1</option>
+                            <option>Option1</option>
+                            <option>Option1</option>
+                            <option>Option1</option>
+
+                        </select>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button> -->
+                <h4 class="ms-1 pt-4">Other Design Elements </h4>
+                <h5 class="ms-1 pt-3">file upload</h5>
+                <input type="file" class="  custom-file-input" style=" background-image: url('images/cloud-upload-icon.svg');
+                background-repeat: no-repeat;
+                background-position: 5% 50%;
+            ">
+                <h5 class="ms-1 pt-3">Radio Button</h5>
+                <div class="d-flex flex-wrap ms-1">
+                    <div class=" form-check-inline">
+                        <input class="" type="radio" id="red" name="radioFilter" id="filter-none"
+                            checked>
+                        <label class="form-check-label" for="inlineRadio1">Option 1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="" id="red" type="radio" name="radioFilter" id="filter-1">
+                        <label class="form-check-label" for="inlineRadio2">Option 2</label>
+                    </div>
+
+                </div>
+                <h5 class="ms-1 pt-3">Checkbox</h5>
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="ms-2" value="" >&MediumSpace; Option 1
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="ms-3" value="" checked>&MediumSpace; Option 2
+                </label>
+                <h5 class="ms-1 pt-3">Snackbar</h5>
+                <div class="form-group mt-1">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-sm-12">
+                            <button type="button" style="text-align: left;height: calc(3.5rem + 2px);"
+                                class="btn btn-outline-danger form-control mt-3"> <i class="fa fa-info-circle"
+                                    aria-hidden="false"></i> This is anerror message</button>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12">
+                            <button type="button" style="text-align: left;height: calc(3.5rem + 2px); "
+                                class="btn btn-outline-info form-control mt-3"> <i class="fa fa-info-circle"
+                                    aria-hidden="false"></i> This is an information message</button>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12">
+                            <button type="button" class="btn btn-outline-warning  form-control mt-3"
+                                style="text-align: left;height: calc(3.5rem + 2px);"><i
+                                    class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                This is an warning message</button>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12">
+                            <button type="button" style="text-align: left;height: calc(3.5rem + 2px);"
+                                class="btn btn-outline-success form-control mt-3"><i class='fa fa-check-circle'
+                                    style='color:#32c34f'></i> This is an successs message</button>
+                        </div>
+                        <h5 class="ms-1 py-3">Call to action</h5>
+                        <button type="button" class="btn btn-danger me-3 ms-3 mt-1"
+                            style="border-radius: 23px; width: 123px;">Primary</button>
+                        <button type="button" class="btn btn-outline-danger me-3 ms-3 mt-1"
+                            style="border-radius: 23px; width: 123px;">Secondary</button>
+                        <h5 class="ms-1 mt-4">Tabs</h5>
+                        <div class="navbar-container " style="transform: translateY(-10px);">
+                            <ul>
+                                <li class="nav-link active-link">
+                                    <a href="#">Home
+                                    </a>
+                                    <div class="underline"></div>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#">About Us</a>
+                                    <div class="underline"></div>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#">Testimonials</a>
+                                    <div class="underline"></div>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#">Contact</a>
+                                    <div class="underline"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row ms-3 mb-5"
+                            style="height: 3px; width: 80vw;background-color: #ADADAD;transform: translateY(-31px);opacity: 25%;">
+                        </div>
+                        <div class="row mt-0 ms-3" style="transform: translateY(-50px);">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Porro libero quibusdam
+                            quis, perferendis recusandae nam qui tempora dolorem aliquam eum facere sapiente in amet,
+                            minima laborum harum cupiditate iure quaerat?</div>
             </form>
         </div>
+
+
+
+
+
+    </div>
 
     </div>
 
@@ -211,6 +383,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
+    <script src="./js/custome.js"></script>
 </body>
 
 </html>
