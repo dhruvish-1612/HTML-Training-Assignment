@@ -113,6 +113,47 @@ a {
 }
 
 input[type="checkbox"] {
-    accent-color: rgb(255, 0, 0);
+    accent-color: #C8242F;
+    
+}
+
+.form-control.is-invalid,
+.was-validate .form-control:invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+   
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-control.is-valid,
+.was-validate .form-control:valid {
+    border-color: #ADADAD;
+    padding-right: calc(1.5em + .75rem);
+    
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-control.is-invalid,
+.was-validat .form-control:invalid {
+    border-color: #ADADAD;
+    padding-right: calc(1.5em + .75rem);
+   
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-control.is-valid,
+.was-validat .form-control:valid {
+    border-color: #ADADAD;
+    padding-right: calc(1.5em + .75rem);
+    
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem)
 }
 
